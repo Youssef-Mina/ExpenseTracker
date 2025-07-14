@@ -1,0 +1,130 @@
+
+@font-face{
+    src:url("./fonts/SFUIText.otf");
+    font-family: apple3ady;
+}
+@font-face{
+    src:url("./fonts/SF-Pro.otf");
+    font-family: appletitle;
+}
+.container{
+    margin:0px;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    background-color: #1C2B20;
+    
+}
+.left{
+    width:50%;
+    height:100vh;
+    background-color: #ffffff;
+    border-top-right-radius:250px;
+    border-bottom-right-radius:250px;
+    margin-top:none;
+    box-shadow: 5px 5px 70px black;
+    align-content: center;
+    
+    
+
+    
+
+}
+.right{
+    width:50%;
+    height:100vh;
+    background-color: #ffffff;
+    margin-left:8%;
+    border-top-left-radius:250px;
+    border-bottom-left-radius:250px;
+    box-shadow: 5px 5px 70px black;
+    
+    
+}
+.circle{
+  
+    background-color: #D2C0B1;
+    border-radius:60px;
+    height:300px;
+    width:300px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    
+}
+.smallcircle{
+    border-radius:35px;
+    height:250px;
+    width:250px;
+     background-color: #1C2B20;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+    
+}
+.img{
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    filter:drop-shadow(2px 2px 100px black);
+    filter:brightness(150%);
+    
+}
+.apple{
+   height: 90px;
+   margin-left:110px;
+   translate: 0px -7px;
+}
+.watch{
+   
+   font-family:appletitle;
+   color:rgb(0, 0, 0);
+   font-size:90px;
+   text-align: center;
+}
+.leftcontainer{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.title{
+    font-family:appletitle;
+    margin-left:193px;
+    margin-top:220px;
+    margin-bottom:-10px;
+    font-size:50px;
+    margin-bottom:none;
+    
+
+}
+.p1{
+    font-family:apple3ady;
+    font-weight: 500;
+    font-size:25px;
+    margin-left:150px;
+    margin-right:70px;
+    color:rgb(85, 84, 84);
+    text-align: center;
+    
+}
+.seemore{
+   font-family:apple3ady;
+    font-weight: 500;
+    font-size:25px;
+    margin-top:-20px;
+    margin-left:150px;
+    margin-right:70px;
+    color:rgb(85, 84, 84);
+    text-align: center; 
+}
+.seemore:hover{
+    color:#1C2B20;
+    cursor:pointer;
+    font-weight:800;
+}
