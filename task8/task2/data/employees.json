@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Youssef",
+    "id": 1,
+    "department": "computerscience",
+    "title": "developer"
+  },
+  {
+    "name": "Mina",
+    "id": 2,
+    "department": "pharmacy",
+    "title": "engineer"
+  },
+  {
+    "id": 4,
+    "name": "Ahmed",
+    "department": "vetrenary",
+    "title": "Vet"
+  }
+]
