@@ -1,0 +1,21 @@
+{
+  "name": "gradproject",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chart.js": "^4.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.0",
+    "ng2-charts": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
