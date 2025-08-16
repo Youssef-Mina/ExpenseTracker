@@ -1,5 +1,0 @@
-[
-    {"id":1,"name":"pizza", "category":"main", "price": 15, "availability":true},
-    {"id":2,"name":"molten cake", "category":"dessert", "price": 10, "availability":false},
-    {"id":3,"name":"fries", "category":"side", "price": 5, "availability":true}
-]

@@ -8,7 +8,7 @@ const addExpense = async (req, res) => {
       .json({
         status: "success",
         message: "Expense Added Successfully",
-        data: { movie: movie },
+        data: { expense: expense },
       });
   } catch (error) {
     res
@@ -19,7 +19,7 @@ const addExpense = async (req, res) => {
 
 const deleteExpense = async (req, res) => {
   try {
-    const expense = await Expense.findOneAndDelete(req.params.comment);
+    const expense = await Expense.findOneAndDelete({ comment: req.params.comment });
     res.status(200).json({
       status: "success",
       message: "Expense Deleted Successfully",
@@ -32,7 +32,7 @@ const deleteExpense = async (req, res) => {
 
 const updateExpense = async (req, res) => {
   try {
-    const expense = await Expense.findOneAndUpdate(req.params.comment, req.body,{new:true});
+    const expense = await Expense.findOneAndUpdate({ comment: req.params.comment }, req.body,{new:true});
     res.status(200).json({
       status: "success",
       message: "Expense Updated Successfully",
@@ -45,10 +45,14 @@ const updateExpense = async (req, res) => {
 
 const getExpense = async (req, res) => {
   try {
-    const expense = await Expense.find();
+      const sortBy = req.query.sortBy || "date";
+      const order = req.query.order==="desc"?-1:1;
+
+   
+    const expense = await Expense.find().sort({[sortBy]:order});
     res.status(200).json({
       status: "success",
-      length: Expense.length,
+      length: expense.length,
       data: { expense: expense },
     });
   } catch (error) {
@@ -58,7 +62,7 @@ const getExpense = async (req, res) => {
 
 const getExpenseByComment = async (req, res) => {
   try {
-    const expense = await Expense.findOne(req.params.comment);
+    const expense = await Expense.find({ comment: req.params.comment });
     res
       .status(200)
       .json({

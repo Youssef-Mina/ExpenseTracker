@@ -1,19 +1,14 @@
 const mongoose = require("mongoose");
 
-const expenseschema = new mongoose.Schema({
+const incomeschema = new mongoose.Schema({
   category: {
     type: String,
     required: [true, "Category is Required"],
     enum: [
-      "food",
-      "bills",
-      "entertainment",
-      "transportation",
-      "repairs",
-      "medical",
-      "rent",
-      "education",
-      "travel",
+      "salary",
+      "commission",
+      "freelance",
+      "investments",
       "miscellaneous",
     ],
   },
@@ -22,6 +17,6 @@ const expenseschema = new mongoose.Schema({
   date: { type: Date, required: [true, "Date is Required"] },
 });
 
-const Expense = mongoose.model("Expense", expenseschema);
+const Income = mongoose.model("Income", incomeschema);
 
-module.exports = Expense;
+module.exports = Income;
